@@ -2,9 +2,9 @@ package com.javarush.kondrashov.entity;
 
 public class User {
 
-    Long id;
+    private Long id;
 
-    String name;
+    private String name;
 
     public Long getId() {
         return id;
