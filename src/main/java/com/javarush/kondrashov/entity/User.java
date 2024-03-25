@@ -1,5 +1,8 @@
 package com.javarush.kondrashov.entity;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class User {
 
     private Long id;
@@ -22,9 +25,5 @@ public class User {
         this.name = name;
     }
 
-    public User(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 
 }
