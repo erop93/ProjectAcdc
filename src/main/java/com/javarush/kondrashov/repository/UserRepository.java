@@ -13,7 +13,6 @@ public class UserRepository  implements BaseRepository {
     private final AtomicLong id = new AtomicLong(0L);
 
     public UserRepository() {
-
     }
 
     @Override
