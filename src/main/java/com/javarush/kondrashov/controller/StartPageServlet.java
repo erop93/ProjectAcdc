@@ -1,5 +1,6 @@
 package com.javarush.kondrashov.controller;
 
+import com.javarush.kondrashov.entity.User;
 import com.javarush.kondrashov.service.Service;
 import com.javarush.kondrashov.service.UserService;
 import jakarta.servlet.RequestDispatcher;
@@ -26,5 +27,16 @@ public class StartPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
 
+        String name = req.getParameter("name");
+        String ip = req.getRemoteAddr();
+
+        User newUser = new User(name, ip);
+        userService.create(newUser);
+
+        session.setAttribute("ip", ip);
+        session.setAttribute("name", name);
+        session.setAttribute("id", newUser.getId());
+
+        resp.sendRedirect("/quest");
     }
 }
