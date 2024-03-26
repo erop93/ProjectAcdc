@@ -7,8 +7,7 @@ import java.util.Optional;
 
 public interface Service {
     void create(User user);
-    void update(User user);
-    void delete(User user);
-    Optional<User> getAll();
-    Collection<User> get (long id);
+
+    Optional<User> get(long id);
+
 }
