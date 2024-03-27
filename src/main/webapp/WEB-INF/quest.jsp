@@ -54,5 +54,6 @@
     <button type="submit" name="answer" class="button2" value="2">Выбрать ответ</button>
 
 </form>
+<%@include file="parts/footer.jsp" %>
 </body>
 </html>

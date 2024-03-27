@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container ">
+<div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center py-3 mb-4 border-bottom">
 
 
