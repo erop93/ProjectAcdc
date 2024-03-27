@@ -15,9 +15,16 @@ public class User {
     @Setter
     private String name;
     private final String ip;
+    @Getter
+    @Setter
+    private int score;
 
     public User(String name, String ip) {
         this.name = name;
         this.ip = ip;
+    }
+
+    public void levelUp() {
+        setScore(score + 1);
     }
 }

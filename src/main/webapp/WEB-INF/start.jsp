@@ -23,7 +23,7 @@
         <label>
             <input id="inputName" type="text" alt="Представьтесь" name="name">
         </label>
-        <button type="submit" class="submit" id="SubmitButton">Приступим!</button>
+        <button type="submit" class="submit" id="button1">Приступим!</button>
     </form>
 
 </div>
