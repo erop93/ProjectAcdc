@@ -28,5 +28,20 @@ public class QuestServlet extends HttpServlet {
         long id = (long) session.getAttribute("id");
         User user = userService.get(id).get();
         int answer = Integer.parseInt(req.getParameter("answer"));
+
+        if (answer == 1) {
+            user.levelUp();
+            if (user.getScore() > 2) {
+                resp.sendRedirect("/win");
+            } else {
+                session.setAttribute("score", user.getScore());
+                resp.sendRedirect("/quest");
+            }
+        } else if (answer == 0) {
+            session.removeAttribute("score");
+            resp.sendRedirect("/lose");
+        } else {
+            resp.sendRedirect("/quest");
+        }
     }
 }

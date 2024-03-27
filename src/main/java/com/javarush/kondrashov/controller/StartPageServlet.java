@@ -36,6 +36,7 @@ public class StartPageServlet extends HttpServlet {
         session.setAttribute("ip", ip);
         session.setAttribute("name", name);
         session.setAttribute("id", newUser.getId());
+        session.setAttribute("score", newUser.getScore());
 
         resp.sendRedirect("/quest");
     }

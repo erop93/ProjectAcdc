@@ -7,7 +7,7 @@
 </head>
 <body>
 <form method="post">
-    <p>
+    <p><label>
         <c:choose>
         <c:when test="${score == 0}">
         Ты потерял память. Принять вызов НЛО?
@@ -19,7 +19,7 @@
         Ты поднялся на мостик. Ты кто?
         </c:when>
         <c:otherwise>Поражение</c:otherwise>
-        </c:choose>
+        </c:choose></label></p>
     <p><label>
         <input type="radio" name="answer" value="1">
         <c:choose>
