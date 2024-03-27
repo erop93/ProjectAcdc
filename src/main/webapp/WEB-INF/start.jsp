@@ -24,7 +24,7 @@
         <label>
             <input id="inputName" type="text" alt="Представьтесь" name="name">
         </label>
-        <button type="submit" class="submit" id="button1">Приступим!</button>
+        <button type="submit" class="btn btn-dark rounded-pill px-3" id="button1">Приступим!</button>
     </form>
 
 </div>
