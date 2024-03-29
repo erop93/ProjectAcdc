@@ -4,12 +4,15 @@
 <html>
 <head>
     <title>Alien quest</title>
+    <style>
+        <%@include file="styles/startStyle.css"%>
+    </style>
 </head>
 <body>
-<h1>Пролог</h1>
 <p>Ты стоишь в космическом порту и готов подняться на борт своего корабля. Разве ты не об этом мечтал?
 Стать капитаном галактического судна с экипажем, который будет совершать подвиги под твоим командованием.
 Так что вперед!</p>
+<img src="images/startpage.png" alt="starshipEntrance">
 
 <h1>Знакомство с экипажем</h1>
 <p>Когда ты поднялся на борт корабля, тебя поприветствовала девушка с черной папкой в руках:
@@ -19,15 +22,14 @@
 А как обращаться к Вам?</p>
 <p>А как обращаться к Вам?</p>
 
-<div class="beginForm">
+
     <form method="post">
         <label>
             <input id="inputName" type="text" alt="Представьтесь" name="name">
         </label>
-        <button type="submit" class="btn btn-dark rounded-pill px-3" id="button1">Приступим!</button>
+        <button type="submit" id="button1">Приступим!</button>
     </form>
 
-</div>
 <%@include file="parts/footer.jsp" %>
 </body>
 </html>
