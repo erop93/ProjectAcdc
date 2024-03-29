@@ -4,6 +4,9 @@
 <html>
 <head>
     <title>You lost!</title>
+    <style>
+        <%@include file="styles/loseStyle.css"%>
+    </style>
 </head>
 <body>
 <div>
