@@ -7,7 +7,6 @@
     <title>Answering questions</title>
 </head>
 <body>
-<img src="images/startpage.jpg" alt="starshipEntrance" width="800" height="600">
 <form method="post">
     <p><label>
         <c:choose>
