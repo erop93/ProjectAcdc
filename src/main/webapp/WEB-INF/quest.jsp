@@ -5,6 +5,9 @@
 <head>
     <c:set var="score" value="${sessionScope.get('score')}"/>
     <title>Answering questions</title>
+    <style>
+        <%@include file="styles/questStyle.css"%>
+    </style>
 </head>
 <body>
 <form method="post">
