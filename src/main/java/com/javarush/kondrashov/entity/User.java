@@ -14,6 +14,8 @@ public class User {
     @Getter
     @Setter
     private String name;
+    @Getter
+    @Setter
     private final String ip;
     @Getter
     @Setter
