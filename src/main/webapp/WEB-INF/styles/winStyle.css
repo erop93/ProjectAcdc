@@ -1,0 +1,19 @@
+body {
+    background-color: #80b867;
+}
+
+h1 {
+    font-size: 40px;
+    color: #3f0429;
+}
+button {
+    width: 150px;
+    height: 40px;
+    padding: 5px 0 4px 10px;
+    border: 1px solid #000000;
+    background: #879d85;
+    color: white;
+    border-radius: 80px;
+    margin-left: 20px;
+    text-align: center;
+}

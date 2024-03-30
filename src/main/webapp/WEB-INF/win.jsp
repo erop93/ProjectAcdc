@@ -4,11 +4,15 @@
 <html>
 <head>
     <title>Victory!</title>
+    <style>
+        <%@include file="styles/winStyle.css"%>
+    </style>
 </head>
 <body>
 
 <div>
-    <h1>You did it</h1>
+    <h1 style="text-align: center;">You did it</h1>
+    <img src="images/winpage.jpg" alt="victory" width="800" height="500" style="display: block; margin: 0 auto;">
     <form method="post">
         <button type="submit" name="home" class="button3">Начать заново</button>
     </form>

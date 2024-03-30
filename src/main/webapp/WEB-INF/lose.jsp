@@ -10,7 +10,8 @@
 </head>
 <body>
 <div>
-    <h2>Вы проиграли. Хотите начать заново?</h2>
+    <h2 style="text-align: center;">Вы проиграли. Хотите начать заново?</h2>
+    <img src="images/losepage.jpg" alt="lose" width="800" height="500" style="display: block; margin: 0 auto;">
     <form method="post">
         <button type="submit" name="home" class="button3">Начать заново</button>
     </form>
