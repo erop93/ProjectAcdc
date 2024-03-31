@@ -9,7 +9,7 @@ import java.util.Optional;
 public class UserService implements Service {
 
     private static Service userService;
-    private static BaseRepository userRepository;
+    public static BaseRepository userRepository;
 
     public UserService() {
         userRepository = new UserRepository();
