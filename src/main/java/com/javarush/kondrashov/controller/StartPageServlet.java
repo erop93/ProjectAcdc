@@ -12,14 +12,15 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.util.stream.BaseStream;
 
-@WebServlet(value = {"/start", "/"})
+import static com.javarush.kondrashov.constants.Constants.*;
+
+@WebServlet(value = {START_SERVLET, ROOT_SERVLET})
 public class StartPageServlet extends HttpServlet {
     private final Service userService = UserService.getInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/start.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher(START_JSP);
         requestDispatcher.forward(req, resp);
     }
 
@@ -38,6 +39,6 @@ public class StartPageServlet extends HttpServlet {
         session.setAttribute("id", newUser.getId());
         session.setAttribute("score", newUser.getScore());
 
-        resp.sendRedirect("/quest");
+        resp.sendRedirect(QUEST_SERVLET);
     }
 }

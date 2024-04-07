@@ -12,13 +12,16 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-@WebServlet("/quest/*")
+
+import static com.javarush.kondrashov.constants.Constants.*;
+
+@WebServlet(QUEST_SERVLET)
 public class QuestServlet extends HttpServlet {
     private final Service userService = UserService.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/quest.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher(QUEST_JSP);
         requestDispatcher.forward(req, resp);
     }
 
@@ -32,16 +35,16 @@ public class QuestServlet extends HttpServlet {
         if (answer == 1) {
             user.levelUp();
             if (user.getScore() > 2) {
-                resp.sendRedirect("/win");
+                resp.sendRedirect(WIN_SERVLET);
             } else {
                 session.setAttribute("score", user.getScore());
-                resp.sendRedirect("/quest");
+                resp.sendRedirect(QUEST_SERVLET);
             }
         } else if (answer == 0) {
             session.removeAttribute("score");
-            resp.sendRedirect("/lose");
+            resp.sendRedirect(LOSE_SERVLET);
         } else {
-            resp.sendRedirect("/quest");
+            resp.sendRedirect(QUEST_SERVLET);
         }
     }
 }

@@ -9,11 +9,14 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-@WebServlet("/lose")
+
+import static com.javarush.kondrashov.constants.Constants.*;
+
+@WebServlet(LOSE_SERVLET)
 public class LoseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/lose.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher(LOSE_JSP);
         requestDispatcher.forward(req, resp);
     }
 
@@ -21,6 +24,6 @@ public class LoseServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         session.removeAttribute("score");
-        resp.sendRedirect("/start");
+        resp.sendRedirect(START_SERVLET);
     }
 }
