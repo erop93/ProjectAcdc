@@ -32,15 +32,15 @@ public class QuestServlet extends HttpServlet {
         User user = userService.get(id).get();
         int answer = Integer.parseInt(req.getParameter("answer"));
 
-        if (answer == 1) {
+        if (answer == CORRECT_ANSWER) {
             user.levelUp();
-            if (user.getScore() > 2) {
+            if (user.getScore() > VICTORY) {
                 resp.sendRedirect(WIN_SERVLET);
             } else {
                 session.setAttribute("score", user.getScore());
                 resp.sendRedirect(QUEST_SERVLET);
             }
-        } else if (answer == 0) {
+        } else if (answer == WRONG_ANSWER) {
             session.removeAttribute("score");
             resp.sendRedirect(LOSE_SERVLET);
         } else {

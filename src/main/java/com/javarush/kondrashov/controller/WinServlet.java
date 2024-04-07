@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static com.javarush.kondrashov.constants.Constants.*;
 
-@WebServlet(WIN_SERVLET)
+@WebServlet(value = WIN_SERVLET)
 public class WinServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
