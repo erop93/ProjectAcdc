@@ -1,7 +1,7 @@
 package com.javarush.kondrashov.controller;
 
 import com.javarush.kondrashov.entity.User;
-import com.javarush.kondrashov.service.Service;
+import com.javarush.kondrashov.service.UserServiceInterface;
 import com.javarush.kondrashov.service.UserService;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -17,7 +17,8 @@ import static com.javarush.kondrashov.constants.Constants.*;
 
 @WebServlet(value = {START_SERVLET, ROOT_SERVLET})
 public class StartPageServlet extends HttpServlet {
-    private final Service userService = UserService.getInstance();
+    private final UserServiceInterface userService = UserService.getInstance();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher(START_JSP);

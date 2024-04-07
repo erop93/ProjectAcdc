@@ -19,6 +19,6 @@ public class User {
     }
 
     public void levelUp() {
-        setScore(score + 1);
+        score++;
     }
 }

@@ -6,16 +6,16 @@ import com.javarush.kondrashov.repository.UserRepository;
 
 import java.util.Optional;
 
-public class UserService implements Service {
+public class UserService implements UserServiceInterface {
 
-    private static Service userService;
+    private static UserServiceInterface userService;
     public static BaseRepository userRepository;
 
     public UserService() {
         userRepository = new UserRepository();
     }
 
-    public static Service getInstance() {
+    public static UserServiceInterface getInstance() {
         if (userService == null) {
             userService = new UserService();
         }
