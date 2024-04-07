@@ -8,17 +8,9 @@ import lombok.Setter;
 @Data
 @AllArgsConstructor
 public class User {
-    @Getter
-    @Setter
     private Long id;
-    @Getter
-    @Setter
     private String name;
-    @Getter
-    @Setter
     private final String ip;
-    @Getter
-    @Setter
     private int score;
 
     public User(String name, String ip) {

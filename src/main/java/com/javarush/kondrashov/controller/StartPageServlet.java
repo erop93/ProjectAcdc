@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.stream.BaseStream;
 
-@WebServlet("/start")
+@WebServlet(value = {"/start", "/"})
 public class StartPageServlet extends HttpServlet {
     private final Service userService = UserService.getInstance();
     @Override
