@@ -6,7 +6,7 @@ public class Constants {
     public static final String QUEST_SERVLET = "/quest";
     public static final String START_SERVLET = "/start";
     public static final String WIN_SERVLET = "/win";
-    public static final String ROOT_SERVLET = "/";
+    public static final String ROOT_SERVLET = "";
 
     public static final String START_JSP = "WEB-INF/start.jsp";
     public static final String QUEST_JSP = "WEB-INF/quest.jsp";
